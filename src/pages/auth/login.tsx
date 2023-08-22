@@ -14,13 +14,17 @@ export default function Login() {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col items-center justify-center gap-4 p-4 min-h-screen">
       <button
         onClick={() => signIn("github")}
         className="bg-slate-800 text-slate-50 p-4 font-medium rounded"
       >
         Sign in with Github
       </button>
+
+      <hr />
+      <p>Or</p>
+      <hr />
 
       <form className="flex flex-col gap-4" onSubmit={handleLogin}>
         <div className="flex flex-col gap-2">

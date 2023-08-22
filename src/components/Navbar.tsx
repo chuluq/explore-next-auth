@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { signOut, useSession } from "next-auth/react";
 
 export default function Navbar() {
+  const { data } = useSession();
+
   return (
     <nav className="bg-blue-200 px-4 py-2">
       <ul className="flex items-center space-x-4 text-xl font-medium">
@@ -10,6 +13,11 @@ export default function Navbar() {
         <li>
           <Link href="/profile">Profile</Link>
         </li>
+        {data ? (
+          <li>
+            <button onClick={() => signOut()}>Sign Out</button>
+          </li>
+        ) : null}
       </ul>
     </nav>
   );
