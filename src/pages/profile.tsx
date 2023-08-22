@@ -3,15 +3,15 @@ import { GetServerSidePropsContext } from "next";
 import { getServerSession } from "next-auth";
 
 import { authOptions } from "./api/auth/[...nextauth]";
-import type { NextPageWithLayout } from "./_app";
+import { NextPageWithLayout } from "./_app";
 
 import Layout from "@/components/Layout";
 
-const HomePage: NextPageWithLayout = () => {
-  return <h1 className="text-2xl font-bold">Home Page</h1>;
+const ProfilePage: NextPageWithLayout = () => {
+  return <h1 className="text-2xl font-bold">Profile Page</h1>;
 };
 
-HomePage.getLayout = function getLayout(page: ReactElement) {
+ProfilePage.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };
 
@@ -25,4 +25,4 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   return { props: {} };
 }
 
-export default HomePage;
+export default ProfilePage;
