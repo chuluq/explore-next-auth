@@ -13,6 +13,9 @@ export default function Navbar() {
         <li>
           <Link href="/profile">Profile</Link>
         </li>
+        <li>
+          <Link href="/about">About</Link>
+        </li>
         {data ? (
           <li>
             <button onClick={() => signOut()}>Sign Out</button>
