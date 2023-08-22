@@ -12,7 +12,9 @@ export default function App({
   return (
     <SessionProvider session={session}>
       <Navbar />
-      <Component {...pageProps} />
+      <main className="flex justify-center items-start p-4">
+        <Component {...pageProps} />
+      </main>
     </SessionProvider>
   );
 }
