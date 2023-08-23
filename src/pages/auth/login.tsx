@@ -22,9 +22,9 @@ export default function Login() {
         Sign in with Github
       </button>
 
-      <hr />
+      <br />
       <p>Or</p>
-      <hr />
+      <br />
 
       <form className="flex flex-col gap-4" onSubmit={handleLogin}>
         <div className="flex flex-col gap-2">
